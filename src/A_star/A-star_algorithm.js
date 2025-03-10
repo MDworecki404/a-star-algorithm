@@ -1,4 +1,4 @@
-import Network from '../layers/network.json';
+import Network from '../layers/UPWR_network.json';
 
 export const buildGraph = () => {
     console.log('Rozpoczęcie budowy grafu');
