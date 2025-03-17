@@ -96,5 +96,7 @@ export const aStar = (start, goal, graph) => {
             }
         }
     }
+    
     return []; // Jeśli nie znaleziono ścieżki, zwracamy pustą tablicę
+    
 };

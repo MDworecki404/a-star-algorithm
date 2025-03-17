@@ -11,13 +11,16 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-L.geoJson(NetworkUPWR).addTo(map)
+//L.geoJson(NetworkUPWR).addTo(map)
+
+const StartTime = Date.now()
 const graph = buildGraph();
 const start = [17.0629621, 51.1128680];
 const goal = [17.0981141, 51.1027081];
-
 const path = aStar(start, goal, graph);
 console.log('Najkrótsza trasa:', path);
+const EndTime = Date.now()
+console.log(EndTime-StartTime)
 
 const polyline = L.polyline(path.map(coord => [coord[1], coord[0]]), {
   color: 'blue',
